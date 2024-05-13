@@ -4,6 +4,14 @@ link = input("Enter YouTube link: ")
 y_tube = YouTube(link)
 
 print(f'Video Title -> {y_tube.title}')
-# Nasim
+stream = y_tube.streams.filter(progressive=True)
+video = list(enumerate(stream))
 
-print("Meaw")
+for i in stream:
+    print(i)
+
+
+print("=========================")
+index=int(input("Enter index: "))
+stream[index].download()
+print("Download Complete")
