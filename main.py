@@ -9,7 +9,6 @@ video = list(enumerate(stream))
 
 for i in stream:
     print(i)
-print("hnjhd")
 
 
 print("=========================")
