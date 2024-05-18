@@ -10,8 +10,7 @@ video = list(enumerate(stream))
 for i in stream:
     print(i)
 
-
 print("=========================")
-index=int(input("Enter index: "))
+index = int(input("Enter index: "))
 stream[index].download()
 print("Download Complete")
