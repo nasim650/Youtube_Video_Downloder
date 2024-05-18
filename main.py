@@ -1,16 +1,16 @@
 from pytube import YouTube
 
 link = input("Enter YouTube link: ")
-y_tube = YouTube(link)
+Y_tube = YouTube(link)
 
-print(f'Video Title -> {y_tube.title}')
-stream = y_tube.streams.filter(progressive=True)
+print(f'Video Title -> {Y_tube.title}')
+stream = Y_tube.streams.filter(progressive="True", res="720p")
 video = list(enumerate(stream))
 
 for i in stream:
     print(i)
 
-print("=========================")
+
 index = int(input("Enter index: "))
 stream[index].download()
 print("Download Complete")

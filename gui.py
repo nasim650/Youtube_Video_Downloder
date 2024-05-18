@@ -1,9 +1,6 @@
 from tkinter import *
 from pytube import YouTube
 from moviepy.editor import VideoFileClip
-
-from main import y_tube
-
 root = Tk()
 
 root.title('Youtube Video Downloader')
@@ -18,7 +15,7 @@ def download():
     Y_tube = YouTube(v_link)
     title = Y_tube.title
     root.title('downloading.....')
-    stream = y_tube.streams.filter(progressive="True",res="720p")
+    stream = Y_tube.streams.filter(progressive="True",res="720p")
     video = stream.first().download()
     clip = VideoFileClip(video)
     clip.close()
