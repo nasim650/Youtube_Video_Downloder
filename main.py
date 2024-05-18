@@ -12,7 +12,6 @@ for i in stream:
 
 
 print("=========================")
-print("Cheking ttt")
 index=int(input("Enter index: "))
 stream[index].download()
 print("Download Complete")
